@@ -21,6 +21,7 @@ public class ReadInMembersTest {
     public void readInMembersTest(){
         ReadInMembers rim = new ReadInMembers();
         rim.readIn("Test/allmemberstest.txt");
+
         assertEquals(rim.memberList.size(), 2);
         assertEquals("Anna Andersson", rim.memberList.get(0).getName());
         assertEquals(rim.memberList.get(1).getPersonalId(), "8505132345");
@@ -35,10 +36,9 @@ public class ReadInMembersTest {
 
        ReadInMembers r = new ReadInMembers(memberTestList);
         r.createActiveList(memberTestList, String.valueOf(p));
-        //boolean check = rim.checkIfMemberIsActive(rim.memberList, String.valueOf(p));
-        //assertFalse(check);
 
         String testInput = Files.readString(p);
+
         assertTrue(testInput.contains("Kalle Nilsson"));
         assertFalse(testInput.contains("Diamanda Djedi"));
     }

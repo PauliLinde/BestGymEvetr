@@ -11,8 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class GymVisitTest {
     Person p1 = new Person("Paulina Linderborg", "9211131234");
-    Visit v1 = new Visit(LocalDate.parse("2024-09-17"));
-    Visit v2 = new Visit(LocalDate.parse("2024-09-29"));
+    LocalDate v1 = LocalDate.parse("2024-09-17");
+    LocalDate v2 = LocalDate.parse("2024-09-29");
     GymVisit gv1 = new GymVisit();
     GymVisit gv2 = new GymVisit();
     Path p = Paths.get("Test/gymvisit.txt");
@@ -27,6 +27,4 @@ public class GymVisitTest {
         assertTrue(testInput.contains("2024-09-17"));
 
     }
-
-
 }

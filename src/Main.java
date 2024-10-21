@@ -23,10 +23,8 @@ public class Main {
                 break;
             }
             input = JOptionPane.showInputDialog(null, "Enter name or personalId to check membership");
-            findPerson.checkMembership(input);
+            findPerson.checkMembership(false, input);
         }
-
-
     }
 
 
